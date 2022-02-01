@@ -38,7 +38,7 @@ form.addEventListener('submit', (e) =>{
         
         e.preventDefault()
     }
-    if(password1.value.length <= 4 || password1.value.length == null) {
+    if(password1.value.length <= 4 || password1.value == '') {
         alertpass1.innerHTML = '<img src="images/checkedred.png" style="transition: 400ms;" alt="red"><span> Greater than 4 requiered</span>'
         e.preventDefault()
     }
@@ -46,7 +46,7 @@ form.addEventListener('submit', (e) =>{
         alertpass1.innerHTML = '<img src="images/checkedgreen.png" style="transition: 400ms;" alt="green">'
         e.preventDefault()
     }
-    if(password2.value.length <= 4  || password2 === password1 || password1.value.length == null) {
+    if(password2.value == '' || password1.value != password2.value || password2.value.length <= 4) {
         alertpass2.innerHTML = '<img src="images/checkedred.png" style="transition: 400ms;" alt="red">'
         e.preventDefault()
     }
